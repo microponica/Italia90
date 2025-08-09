@@ -4,29 +4,83 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
 <title>Magyar Posta – Italia ’90</title>
-<link rel="stylesheet" href="style.css">
+<style>
+  body {
+    margin: 0;
+    background: #0b0b0d;
+    color: #e7e7ea;
+    font-family: -apple-system, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    padding: 16px;
+  }
+  .card {
+    max-width: 800px;
+    margin: auto;
+    background: #141418;
+    border-radius: 18px;
+    padding: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.45);
+  }
+  h1 {
+    font-size: 20px;
+    margin-top: 0;
+  }
+  .sub {
+    font-size: 14px;
+    color: #9aa0a6;
+    margin-bottom: 12px;
+  }
+  img.full {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    background: #000;
+  }
+  button#play {
+    width: 100%;
+    padding: 14px;
+    margin-top: 14px;
+    background: #24a0ed;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+  }
+  video {
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 12px;
+    background: #000;
+    display: none;
+  }
+  footer {
+    font-size: 12px;
+    color: #9aa0a6;
+    margin-top: 14px;
+    text-align: center;
+  }
+</style>
 </head>
 <body>
-<div class="wrap"><div class="card">
-<h1>Magyar Posta – Italia ’90</h1>
-<div class="sub">Tocca l’immagine per aprirla in alta risoluzione e zoomare.</div>
+<div class="card">
+  <h1>Magyar Posta – Italia ’90</h1>
+  <div class="sub">Tocca l’immagine per aprirla in alta risoluzione e zoomare.</div>
 
-<a href="1.png" target="_blank" rel="noopener">
-  <img class="full" src="1.png" alt="Francobollo Italia 90 - Magyar Posta">
-</a>
+  <a href="1.png" target="_blank" rel="noopener">
+    <img class="full" src="1.png" alt="Francobollo Italia 90 - Magyar Posta">
+  </a>
 
-<!-- Pulsante Play -->
-<button id="play" style="margin-top:12px;appearance:none;border:0;border-radius:999px;padding:12px 18px;background:#24a0ed;color:#fff;font-weight:700;cursor:pointer">
-  ▶︎ Play animation
-</button>
+  <button id="play">▶︎ Play animation</button>
 
-<!-- Video animazione -->
-<video id="vid" controls playsinline preload="auto" style="display:none;width:100%;max-width:800px;border-radius:12px;background:#000;margin-top:12px">
-  <source src="PixVerse_V4.5_Image_Text_360P_Subtle_3D_motion.mp4" type="video/mp4">
-</video>
+  <video id="vid" controls playsinline preload="auto">
+    <source src="PixVerse_V4.5_Image_Text_360P_Subtle_3D_motion.mp4" type="video/mp4">
+  </video>
 
-<footer>Qui puoi aggiungere la descrizione e collegare un'animazione in seguito.</footer>
-</div></div>
+  <footer>Qui puoi aggiungere la descrizione e collegare un'animazione in seguito.</footer>
+</div>
 
 <script>
   const b = document.getElementById('play');
