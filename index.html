@@ -1,78 +1,75 @@
 <!doctype html>
-<html lang="it">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
 <title>Magyar Posta – Italia ’90</title>
 <style>
-  :root{
-    --bg:#0b0b0d;
-    --card:#141418;
-    --text:#e7e7ea;
-    --muted:#9aa0a6;
-    --accent:#24a0ed;
+  body {
+    margin: 0;
+    background: #0b0b0d;
+    color: #e7e7ea;
+    font-family: -apple-system, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    padding: 16px;
   }
-  body{
-    margin:0;
-    background:var(--bg);
-    color:var(--text);
-    font-family:-apple-system,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-    line-height:1.5;
-    padding:16px;
+  .card {
+    max-width: 800px;
+    margin: auto;
+    background: #141418;
+    border-radius: 18px;
+    padding: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.45);
   }
-  .card{
-    max-width:800px;
-    margin:auto;
-    background:var(--card);
-    border-radius:18px;
-    padding:16px;
-    box-shadow:0 10px 30px rgba(0,0,0,.45);
+  h1 {
+    font-size: 20px;
+    margin: 0 0 8px;
   }
-  h1{font-size:20px;margin:0 0 8px}
-  .sub{font-size:14px;color:var(--muted);margin:0 0 12px}
-  img.full{
-    width:100%;
-    height:auto;
-    border-radius:12px;
-    display:block;
-    background:#000;
+  .sub {
+    font-size: 14px;
+    color: #9aa0a6;
+    margin: 0 0 12px;
   }
-  .video-wrap{
-    position:relative;
-    padding-top:56.25%; /* 16:9 ratio */
-    margin-top:12px;
-    border-radius:12px;
-    overflow:hidden;
-    background:#000;
+  img.full {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    background: #000;
   }
-  .video-wrap iframe{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    border:0;
+  .video-wrap {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 */
+    margin-top: 12px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #000;
   }
-  .note{
-    font-size:12px;
-    color:var(--muted);
-    margin-top:8px;
-    text-align:center;
+  .video-wrap iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border: 0;
   }
-  a{color:var(--accent);text-decoration:none}
+  .note {
+    font-size: 12px;
+    color: #9aa0a6;
+    margin-top: 8px;
+    text-align: center;
+  }
+  a { color: #24a0ed; text-decoration: none; }
 </style>
 </head>
 <body>
   <div class="card">
     <h1>Magyar Posta – Italia ’90</h1>
-    <div class="sub">Tocca l’immagine per aprirla in alta risoluzione e zoomare.</div>
+    <div class="sub">Tap the image to open it in high resolution and zoom.</div>
 
-    <!-- Immagine francobollo -->
+    <!-- Stamp Image -->
     <a href="1.png" target="_blank" rel="noopener">
       <img class="full" src="1.png" alt="Francobollo Italia 90 - Magyar Posta">
     </a>
 
-    <!-- Video animazione (Streamable) -->
+    <!-- Animation Video (Streamable) -->
     <div class="video-wrap">
       <iframe
         src="https://streamable.com/e/77xvp9?autoplay=0&loop=0&nocontrols=0"
@@ -82,8 +79,8 @@
     </div>
 
     <p class="note">
-      Se il video non si carica, apri direttamente
-      <a href="https://streamable.com/77xvp9" target="_blank" rel="noopener">l’animazione</a>.
+      If the video doesn’t load, open it directly
+      <a href="https://streamable.com/77xvp9" target="_blank" rel="noopener">here</a>.
     </p>
   </div>
 </body>
