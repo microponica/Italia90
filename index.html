@@ -10,10 +10,41 @@
 <div class="wrap"><div class="card">
 <h1>Magyar Posta – Italia ’90</h1>
 <div class="sub">Tocca l’immagine per aprirla in alta risoluzione e zoomare.</div>
+
 <a href="1.png" target="_blank" rel="noopener">
-  <img class="full" src="stamp.jpg" alt="Francobollo Italia 90 - Magyar Posta">
+  <img class="full" src="1.png" alt="Francobollo Italia 90 - Magyar Posta">
 </a>
+
+<!-- Pulsante Play -->
+<button id="play" style="margin-top:12px;appearance:none;border:0;border-radius:999px;padding:12px 18px;background:#24a0ed;color:#fff;font-weight:700;cursor:pointer">
+  ▶︎ Play animation
+</button>
+
+<!-- Video animazione -->
+<video id="vid" controls playsinline preload="auto" style="display:none;width:100%;max-width:800px;border-radius:12px;background:#000;margin-top:12px">
+  <source src="PixVerse_V4.5_Image_Text_360P_Subtle_3D_motion.mp4" type="video/mp4">
+</video>
+
 <footer>Qui puoi aggiungere la descrizione e collegare un'animazione in seguito.</footer>
 </div></div>
+
+<script>
+  const b = document.getElementById('play');
+  const v = document.getElementById('vid');
+  b.addEventListener('click', () => {
+    v.style.display = 'block';
+    v.play();
+    b.textContent = '⏸ Pausa';
+    b.onclick = () => {
+      if (v.paused) {
+        v.play();
+        b.textContent = '⏸ Pausa';
+      } else {
+        v.pause();
+        b.textContent = '▶︎ Riprendi';
+      }
+    };
+  });
+</script>
 </body>
 </html>
